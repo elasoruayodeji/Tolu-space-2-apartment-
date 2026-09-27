@@ -1,0 +1,23 @@
+.nav-wrap { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--color-paper) 92%, transparent); border-bottom: 1px solid var(--color-line); backdrop-filter: blur(18px); }
+.nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.brand { display: flex; align-items: center; gap: var(--space-3); min-width: 180px; }
+.brand__logo { width: 44px; height: 44px; object-fit: cover; border-radius: 50%; border: 1px solid var(--color-line); }
+.brand__fallback { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: .06em; }
+.brand__fallback em { font-style: normal; color: var(--color-gold-dark); }
+.nav__links { display: flex; align-items: center; gap: var(--space-6); }
+.nav__links a, .mobile-menu a { position: relative; color: var(--color-ink-soft); font-size: var(--font-size-sm); transition: color var(--transition-fast); }
+.nav__links a::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -7px; height: 1px; background: var(--color-gold); transition: right var(--transition-fast); }
+.nav__links a:hover, .nav__links a.active { color: var(--color-ink); }
+.nav__links a.active::after, .nav__links a:hover::after { right: 0; }
+.nav__apartment { margin-left:auto; }
+.nav__action { min-width: 180px; display: flex; justify-content: flex-end; }
+.button { display: inline-flex; border: 0; padding: 0; background: transparent; cursor: pointer; }
+.button > a, .button > span { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3); min-height: 48px; padding: 0 var(--space-5); border-radius: var(--radius-pill); font-size: var(--font-size-sm); font-weight: var(--weight-semibold); transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast); }
+.button--primary > a, .button--primary > span { background: var(--color-ink); color: var(--color-white); }
+.button--primary:hover > a, .button--primary:hover > span { background: var(--color-gold-dark); }
+.button--outline > a, .button--outline > span { border: 1px solid var(--color-line); color: var(--color-ink); background: var(--color-surface); }
+.button--outline:hover > a, .button--outline:hover > span { border-color: var(--color-gold); }
+.nav__toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--color-line); border-radius: 50%; background: var(--color-surface); color: var(--color-ink); }
+.mobile-menu { display: none; border-top: 1px solid var(--color-line); background: var(--color-paper); }
+.mobile-menu__inner { display: grid; gap: var(--space-5); padding-block: var(--space-6); }
+@media (max-width: 820px) { .nav__links, .nav__action, .nav__apartment { display: none; } .nav__toggle { display: grid; place-items: center; } .mobile-menu { display: block; } }
