@@ -32,3 +32,4 @@ export const about=apartmentOneAbout;
 export const amenities=apartmentOneAmenities;
 export const gallery=apartmentOneGallery;
 export const navItems=[{label:"Home",path:"/"},{label:"Gallery",path:"/gallery"},{label:"About",path:"/about"},{label:"Contact",path:"/contact"}];
+export const whatsappUrl = contact.whatsapp.nigeria.link;
