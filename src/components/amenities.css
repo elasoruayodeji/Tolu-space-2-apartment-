@@ -1,7 +1,8 @@
-.amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--color-line); border: 1px solid var(--color-line); }
+.amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--color-line); border-left: 1px solid var(--color-line); }
 .amenity { position: relative; min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-6); padding: var(--space-6); background: var(--color-paper); transition: background var(--transition-fast); }
 .amenity:hover { background: var(--color-surface); }
 .amenity__icon { width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-gold-dark); }
+.amenity { position: relative; min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-6); padding: var(--space-6); background: var(--color-paper); transition: background var(--transition-fast); border-right: 1px solid var(--color-line); border-bottom: 1px solid var(--color-line); }
 .amenity h3 { margin: 0 0 var(--space-1); font-family: var(--font-display); font-size: 1.45rem; line-height: 1.1; font-weight: 600; }
 .amenity p { margin: 0; color: var(--color-ink-soft); font-size: var(--font-size-sm); }
 .amenity__index { position: absolute; top: var(--space-5); right: var(--space-5); color: rgba(27,24,19,.28); font-size: var(--font-size-xs); letter-spacing: .08em; }
